@@ -1,4 +1,7 @@
+import java.awt.Button;
 import java.awt.Color;
+import java.awt.TextArea;
+import java.awt.Window;
 import java.util.ArrayList;
 
 public class Calc {

@@ -7,12 +7,12 @@ public class CommentStripper {
 		str = "";
 		for(String line : lines)
 		{
-			str += line.replaceAll("//.*", "") + "\n";
+			str += line.replaceAll("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","") + "\n";
 		}
 		return str.substring(0, str.length() - 1);
 	}
 	public static void main(String[] args) {
-		System.out.println(strip("hello world//I am dope\nfuck yall\n//I'm dope"));
+		System.out.println(strip("hello world//this is text other text yall\n//more text"));
 	}
 
 }
